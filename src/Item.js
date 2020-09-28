@@ -7,7 +7,7 @@ const Item = (props) => {
       <img src={props.url} alt="" />
       <h2>{props.title}</h2>
       <p>Price: {props.price}</p>
-      <AddCartButton />
+      <AddCartButton addToCart={props.addToCart} />
       {/* <button className="buy-now-button">BUY NOW</button> */}
     </div>
   );

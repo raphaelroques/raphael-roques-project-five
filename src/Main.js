@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Item from "./Item.js";
-// import ItemPrice from "./ItemPrice.js";
 import itemsPricesList from "./itemsPricesList";
 
 class Main extends Component {
@@ -35,24 +34,22 @@ class Main extends Component {
   }
 
   render() {
-    // console.log(this.state.items[0]);
-    // console.log(this.state.prices[0]);
     return (
       <main className="Main wrapper">
-        {this.state.items.map((item) => {
+        {this.state.items.map((item, index) => {
           return (
             <Item
               key={item.id}
               id={item.id}
               url={item.urls.regular}
               title={item.alt_description}
-              price={`$99`}
+              price={itemsPricesList[index].price}
+              addToCart={() => {
+                this.props.addToCart(item);
+              }}
             />
           );
         })}
-        {/* {this.state.prices.map((item) => {
-          return <ItemPrice key={item.itemId} price={item.price} />;
-        })} */}
       </main>
     );
   }

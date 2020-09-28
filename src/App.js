@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       userIsLoggedIn: false,
+      cart: [],
     };
   }
   handleClick = () => {
@@ -16,13 +17,28 @@ class App extends Component {
       userIsLoggedIn: !this.state.userIsLoggedIn,
     });
   };
+
+  addToCart = (addToCartItem) => {
+    const newCart = [...this.state.cart];
+    newCart.push(addToCartItem);
+    console.log(addToCartItem);
+
+    this.setState({
+      cart: newCart,
+    });
+  };
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header cart={this.state.cart} />
+
         {this.state.userIsLoggedIn ? (
           <>
-            <Main />
+            <Main
+              addToCart={(item) => {
+                this.addToCart(item);
+              }}
+            />
           </>
         ) : (
           <main className="landing-page">

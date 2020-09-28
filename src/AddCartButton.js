@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Main from "./Main.js";
+// import Main from "./Main.js";
 
 class AddCartButton extends Component {
   constructor() {
@@ -16,6 +16,7 @@ class AddCartButton extends Component {
       count: this.state.count - 1,
       myCart: this.state.myCart,
     });
+    this.props.addToCart();
     console.log(this.state.myCart);
     // console.log(`The current state is ${this.state.count}!`);
   };

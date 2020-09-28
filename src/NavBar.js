@@ -28,7 +28,11 @@ class NavBar extends Component {
             {this.state.clicked % 2 ? (
               <ul className="display-cart">
                 <li>MY CART</li>
-                <li>qwe</li>
+                <li>
+                  {this.props.cart.map(() => {
+                    return <li></li>;
+                  })}
+                </li>
                 <li>TOTAL</li>
                 <li>
                   <button>proceed to checkout</button>
