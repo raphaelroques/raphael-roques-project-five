@@ -3,10 +3,10 @@ import SocialFollow from "./SocialFollow";
 import NavBar from "./NavBar.js";
 import logo from "./logo.png";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
-      <NavBar />
+      <NavBar cart={props.cart} />
       <div className="header-container wrapper">
         <img className="logo" src={logo} alt="" />
         <div className="heading">
