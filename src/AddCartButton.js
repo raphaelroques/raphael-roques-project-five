@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Main from "./Main.js";
 
 class AddCartButton extends Component {
   constructor() {
@@ -8,7 +7,6 @@ class AddCartButton extends Component {
       count: 20,
       myCart: {},
     };
-    // this.handleClick = this.handleClick.bind(this);
   }
   handleClick = () => {
     // alert("Item added to the shopping cart!");
@@ -17,11 +15,12 @@ class AddCartButton extends Component {
       myCart: this.state.myCart,
     });
     this.props.addToCart();
-    console.log(this.state.myCart);
+    // console.log(this.state.myCart);
     // console.log(`The current state is ${this.state.count}!`);
   };
 
   render() {
+    // console.log(this.state.myCart);
     return (
       <>
         <p>Qty Available: {this.state.count} </p>

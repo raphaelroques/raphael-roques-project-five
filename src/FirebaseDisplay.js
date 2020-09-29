@@ -14,7 +14,7 @@ class FirebaseDisplay extends Component {
     const dbRef = firebase.database().ref();
     // listen to the value change and use `response` as the db value
     dbRef.on("value", (response) => {
-      console.log(response.val());
+      // console.log(response.val());
       // clean up data from Firebase and store in state
       const newState = [];
       const data = response.val();
@@ -45,49 +45,49 @@ class FirebaseDisplay extends Component {
       });
     });
   }
-//   //get user input and update thhe userInput state
-//   handleChange = (event) => {
-//     console.log(event.target.value); // user input data
+  //   //get user input and update thhe userInput state
+  //   handleChange = (event) => {
+  //     console.log(event.target.value); // user input data
 
-//     this.setState({
-//       userInput: event.target.value,
-//     });
-//   };
+  //     this.setState({
+  //       userInput: event.target.value,
+  //     });
+  //   };
 
-//   // stop refreshing my page
-//   // take the user input and store in Firebase
-//   // reset input field
-//   handleClick = (event) => {
-//     event.preventDefault();
+  //   // stop refreshing my page
+  //   // take the user input and store in Firebase
+  //   // reset input field
+  //   handleClick = (event) => {
+  //     event.preventDefault();
 
-//     //  open portal to firebase
-//     const dbRef = firebase.database().ref();
+  //     //  open portal to firebase
+  //     const dbRef = firebase.database().ref();
 
-//     // add new record to firebase
-//     dbRef.push(this.state.userInput);
+  //     // add new record to firebase
+  //     dbRef.push(this.state.userInput);
 
-//     //rest input field
-//     this.setState({
-//       userInput: "",
-//     });
-//   };
+  //     //rest input field
+  //     this.setState({
+  //       userInput: "",
+  //     });
+  //   };
 
-//   //get the specific record key to remove
-//   // delete that specific book from firebase
-//   handleRemove = (bookKey) => {
-//     console.log(bookKey);
+  //   //get the specific record key to remove
+  //   // delete that specific book from firebase
+  //   handleRemove = (bookKey) => {
+  //     console.log(bookKey);
 
-//     //open portal to firebase
-//     const dbRef = firebase.database().ref();
+  //     //open portal to firebase
+  //     const dbRef = firebase.database().ref();
 
-//     // delete the book based on bookKey
-//     dbRef.child(bookKey).remove();
-//   };
+  //     // delete the book based on bookKey
+  //     dbRef.child(bookKey).remove();
+  //   };
 
   render() {
     return (
       <div className="App">
-          <p>TEST FIREBASE PARAGRAPH</p>
+        <p>TEST FIREBASE PARAGRAPH</p>
       </div>
     );
   }

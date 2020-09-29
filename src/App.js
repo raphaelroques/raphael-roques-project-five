@@ -21,12 +21,13 @@ class App extends Component {
   addToCart = (addToCartItem) => {
     const newCart = [...this.state.cart];
     newCart.push(addToCartItem);
-    console.log(addToCartItem);
+    // console.log(addToCartItem);
 
     this.setState({
       cart: newCart,
     });
   };
+
   render() {
     return (
       <div className="App">
@@ -50,6 +51,7 @@ class App extends Component {
             </div>
           </main>
         )}
+
         <Footer />
       </div>
     );

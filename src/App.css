@@ -197,13 +197,15 @@ header {
 
 .display-cart {
   flex-direction: column;
-  background-color: rgba(128, 128, 128, 0.474);
+  background-color: rgba(0, 0, 0, 0.930);
   border: 2px solid yellow;
   position: absolute;
   top: 65px;
-  width: 220px;
+  /* width: 220px; */
   right: 0;
-  min-height: 300px;
+  /* min-height: 300px; */
+  max-height: 650px;
+  overflow: auto;
 }
 
 .display-cart li {
@@ -216,6 +218,36 @@ header {
   background-color: black;
   color: yellow;
   font-weight: 600;
+
+}
+
+.display-cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.display-cart p {
+  font-size: 2rem;
+}
+
+.display-cart h3 {
+  font-size: 2rem;
+  width: 80%;
+  margin-top: 40px;
+}
+
+.display-cart li img {
+  width: 30%;
+}
+
+.name-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  width: 60%;
 }
 
 /* main */

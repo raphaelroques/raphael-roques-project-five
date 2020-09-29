@@ -9,7 +9,7 @@ class Main extends Component {
     this.state = {
       items: [],
       prices: itemsPricesList.results,
-      storeItems: [],
+      // storeItems: [],
     };
   }
   componentDidMount() {
@@ -21,7 +21,7 @@ class Main extends Component {
       params: {
         client_id: apiKey,
         format: "json",
-        query: "running shoes nike adidas",
+        query: "running shoes",
         per_page: 20,
       },
     }).then((res) => {
