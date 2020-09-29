@@ -6,7 +6,7 @@ import logo from "./logo.png";
 const Header = (props) => {
   return (
     <header>
-      <NavBar cart={props.cart} />
+      <NavBar cart={props.cart} removeItem={props.removeItem} />
       <div className="header-container wrapper">
         <img className="logo" src={logo} alt="" />
         <div className="heading">

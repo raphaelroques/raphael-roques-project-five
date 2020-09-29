@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Item from "./Item";
 import itemsPricesList from "./itemsPricesList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +9,6 @@ class NavBar extends Component {
     this.state = {
       clicked: 0,
       prices: itemsPricesList.results,
-      // myCart: [],
     };
   }
 
@@ -20,8 +18,10 @@ class NavBar extends Component {
     });
   };
 
+  // componentDidUpdate(){??????
+  // }
+
   render() {
-    // console.log(`${this.props.cart}`);
     return (
       <nav className="navbar wrapper">
         <ul>
@@ -37,23 +37,29 @@ class NavBar extends Component {
             />
             {this.state.clicked % 2 ? (
               <ul className="display-cart">
-                {/* <li>MY CART</li> */}
                 {this.props.cart.map((item, index) => {
                   return (
-                    <li className="cart-item-container">
+                    <li key={item.key} className="cart-item-container">
                       <img src={item.urls.regular} alt="" />
                       <div className="name-and-button">
                         <h3>{item.alt_description}</h3>
-                        <button className="remove-item">REMOVE ITEM</button>
+                        <button
+                          className="remove-item"
+                          onClick={() => {
+                            this.props.removeItem(item.key);
+                          }}
+                        >
+                          REMOVE ITEM
+                        </button>
                       </div>
                       <p>{itemsPricesList[index].price}</p>
                     </li>
                   );
                 })}
-                <li>TOTAL</li>
+                {/* <li>TOTAL</li>
                 <li>
                   <button>proceed to checkout</button>
-                </li>
+                </li> */}
               </ul>
             ) : null}
           </li>

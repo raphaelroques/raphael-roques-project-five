@@ -9,7 +9,6 @@ class Main extends Component {
     this.state = {
       items: [],
       prices: itemsPricesList.results,
-      // storeItems: [],
     };
   }
   componentDidMount() {

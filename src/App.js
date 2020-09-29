@@ -17,12 +17,26 @@ class App extends Component {
       userIsLoggedIn: !this.state.userIsLoggedIn,
     });
   };
+  removeItem = (keyToBeRemoved) => {
+    const oldCart = [...this.state.cart];
+
+    const cartIndex = this.state.cart.findIndex((item) => {
+      return item.key === keyToBeRemoved;
+    });
+    oldCart.splice(cartIndex, 1);
+
+    this.setState({
+      cart: oldCart,
+    });
+  };
 
   addToCart = (addToCartItem) => {
+    const newItem = { ...addToCartItem };
     const newCart = [...this.state.cart];
-    newCart.push(addToCartItem);
-    // console.log(addToCartItem);
+    console.log("addtocartitem", addToCartItem);
+    newItem.key = Math.random() * 1000;
 
+    newCart.push(newItem);
     this.setState({
       cart: newCart,
     });
@@ -31,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header cart={this.state.cart} />
+        <Header cart={this.state.cart} removeItem={this.removeItem} />
 
         {this.state.userIsLoggedIn ? (
           <>
