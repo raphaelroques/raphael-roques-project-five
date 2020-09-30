@@ -18,9 +18,6 @@ class NavBar extends Component {
     });
   };
 
-  // componentDidUpdate(){??????
-  // }
-
   render() {
     return (
       <nav className="navbar wrapper">
@@ -35,6 +32,7 @@ class NavBar extends Component {
               size="2x"
               onClick={this.handleClick}
             />
+            <p className="cart-items-counter">{this.props.countCartItems}</p>
             {this.state.clicked % 2 ? (
               <ul className="display-cart">
                 {this.props.cart.map((item, index) => {
