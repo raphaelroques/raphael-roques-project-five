@@ -10,11 +10,21 @@ class App extends Component {
     this.state = {
       userIsLoggedIn: false,
       cart: [],
+      countCartItems: 0,
     };
   }
   handleClick = () => {
     this.setState({
       userIsLoggedIn: !this.state.userIsLoggedIn,
+    });
+  };
+
+  countOfCartItems = () => {
+    const countItems = () => {
+      return this.state.cart.length;
+    };
+    this.setState({
+      countCartItems: countItems,
     });
   };
   removeItem = (keyToBeRemoved) => {
@@ -33,7 +43,7 @@ class App extends Component {
   addToCart = (addToCartItem) => {
     const newItem = { ...addToCartItem };
     const newCart = [...this.state.cart];
-    console.log("addtocartitem", addToCartItem);
+    // console.log("addtocartitem", addToCartItem);
     newItem.key = Math.random() * 1000;
 
     newCart.push(newItem);
