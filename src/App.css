@@ -1,7 +1,7 @@
 /* general */
 .wrapper {
   width: 90%;
-  max-width: 1920px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -91,6 +91,13 @@ a {
   font-weight: 600;
 }
 
+.landing-page button:hover,
+.landing-page button:focus,
+.landing-page button:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
 .landing-page h2 {
   font-size: 3rem;
   padding: 50px;
@@ -128,7 +135,7 @@ header {
   width: 68%;
 }
 
-/* the navar */
+/* the navbar */
 .navbar.wrapper {
   height: 51px;
   display: flex;
@@ -150,6 +157,14 @@ header {
   font-size: 2rem;
   justify-content: center;
   align-items: center;
+}
+
+.navbar li:focus {
+  color: yellow;
+}
+
+.nav-top:hover {
+  color: yellow;
 }
 
 .nav-cart {
@@ -182,9 +197,7 @@ header {
   border: 2px solid yellow;
   position: absolute;
   top: 65px;
-
   right: 0;
-
   max-height: 650px;
   min-width: 300px;
   min-height: 150px;
@@ -201,8 +214,14 @@ header {
   background-color: black;
   color: yellow;
   font-weight: 600;
-
 }
+
+.display-cart button:hover,
+.display-cart button:focus,
+.display-cart button:active {
+  background-color: rgba(70, 59, 59, 0.753);
+}
+
 
 .display-cart li {
   display: flex;
@@ -239,6 +258,7 @@ header {
   width: 100%;
   justify-content: space-between;
 }
+
 
 /* end of navbar */
 /* end of header */
@@ -294,7 +314,9 @@ img {
   height: 50px;
 }
 
-.buy-now-button:hover {
+.buy-now-button:hover,
+.buy-now-button:focus,
+.buy-now-button:active {
   background-color: rgba(0, 0, 0, 0.658);
   color: yellow;
 }
@@ -323,6 +345,11 @@ footer {
   color: #eb3223;
 }
 
+.juno:hover,
+.juno:focus {
+  color: #fd5d39
+}
+
 /* end of footer */
 
 /* socials */
@@ -343,7 +370,8 @@ a.social {
   display: inline-block;
 }
 
-a.social:hover {
+a.social:hover,
+a.social:focus {
   transform: translateY(-2px);
 }
 

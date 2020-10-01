@@ -23,11 +23,14 @@ class NavBar extends Component {
       <nav className="navbar wrapper">
         <ul>
           <li>
-            <a href="#contact">CONTACT</a>
+            <a className="nav-top" href="#contact">
+              CONTACT
+            </a>
           </li>
           <li className="nav-cart">
             <span class="sr-only">my cart</span>
             <FontAwesomeIcon
+              className="nav-top"
               icon={faShoppingCart}
               size="2x"
               onClick={this.handleClick}
