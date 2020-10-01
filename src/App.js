@@ -14,12 +14,14 @@ class App extends Component {
       available: 20,
     };
   }
+
   //make a function that will check is the user is logged in to start shopping
   handleClick = () => {
     this.setState({
       userIsLoggedIn: !this.state.userIsLoggedIn,
     });
   };
+
   //create a function that will run when elements are removed from the cart
   removeItem = (keyToBeRemoved) => {
     const oldCart = [...this.state.cart];
@@ -34,6 +36,7 @@ class App extends Component {
       available: this.state.available + 1,
     });
   };
+
   //create a function that will run when items are added to the cart
   addToCart = (addToCartItem) => {
     const newItem = { ...addToCartItem };
@@ -58,7 +61,7 @@ class App extends Component {
           countCartItems={this.state.countCartItems}
         />
 
-        {/* displays the landing page if the user is not logged in or else the store */}
+        {/* displays the landing page if the user is not logged in or else the eStore */}
         {this.state.userIsLoggedIn ? (
           <>
             {/* render the Main component */}

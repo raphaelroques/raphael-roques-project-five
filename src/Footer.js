@@ -13,6 +13,8 @@ const Footer = () => {
           </a>
         </p>
       </div>
+
+      {/* render the SocialFollow component */}
       <SocialFollow />
     </footer>
   );

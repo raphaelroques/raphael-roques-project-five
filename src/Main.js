@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Item from "./Item.js";
-// import itemsPricesList from "./itemsPricesList";
 
+// Main Component
 class Main extends Component {
   constructor() {
     super();
@@ -10,6 +10,8 @@ class Main extends Component {
       items: [],
     };
   }
+
+  // making a Get request with axios to get datas from the unsplash API
   componentDidMount() {
     const apiKey = "arDW3ugxF65qos5neWg3z7FAkKs7g1f4HjgSwRae8ZM";
     axios({
@@ -24,6 +26,7 @@ class Main extends Component {
       },
     }).then((res) => {
       const storeItems = res.data.results;
+      // add random prices between 60 and 100 to each objects in the storeItems array
       storeItems.forEach((items) => {
         items.price = (
           Math.round((Math.random() * (100 - 60) + 60) * 100) / 100
@@ -46,6 +49,7 @@ class Main extends Component {
         {this.state.items.map((item, index) => {
           return (
             <>
+              {/* render the index component*/}
               <Item
                 key={item.id}
                 id={item.id}

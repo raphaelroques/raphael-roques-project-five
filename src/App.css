@@ -62,7 +62,6 @@ a {
 }
 
 /* landing page */
-
 .landing-page {
   display: flex;
   flex-direction: column;
@@ -101,6 +100,9 @@ a {
   color: yellow;
 }
 
+/* end of landing page */
+
+
 /* header */
 header {
   height: 40vh;
@@ -126,6 +128,7 @@ header {
   width: 68%;
 }
 
+/* the navar */
 .navbar.wrapper {
   height: 51px;
   display: flex;
@@ -237,6 +240,10 @@ header {
   justify-content: space-between;
 }
 
+/* end of navbar */
+/* end of header */
+
+
 /* main */
 main {
   display: flex;
@@ -292,8 +299,11 @@ img {
   color: yellow;
 }
 
-/* footer */
+/* end of main */
 
+
+
+/* footer */
 footer {
   background-color: black;
   display: flex;
@@ -312,6 +322,8 @@ footer {
 .juno {
   color: #eb3223;
 }
+
+/* end of footer */
 
 /* socials */
 .social-container {
@@ -351,9 +363,11 @@ a.instagram {
   color: black;
 }
 
+/* end of socials */
 
 
-
+/* @media */
+/* small desktop-tablets */
 @media (max-width: 850px) {
   h1 {
     font-size: 5rem;
@@ -376,6 +390,7 @@ a.instagram {
   }
 }
 
+/* mobiles */
 @media (max-width: 500px) {
   h1 {
     font-size: 4rem;
@@ -390,6 +405,7 @@ a.instagram {
   }
 }
 
+/* small mobiles */
 @media (max-width: 370px) {
   h1 {
     font-size: 3rem;

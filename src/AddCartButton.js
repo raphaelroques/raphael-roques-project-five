@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+// addCartButton component
 class AddCartButton extends Component {
   constructor() {
     super();

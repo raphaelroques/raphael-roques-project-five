@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
+// NavBar component
 class NavBar extends Component {
   constructor() {
     super();
@@ -10,6 +11,7 @@ class NavBar extends Component {
     };
   }
 
+  // create a function that will toogle the cart menu
   handleClick = () => {
     this.setState({
       clicked: this.state.clicked + 1,
@@ -54,6 +56,7 @@ class NavBar extends Component {
                 })}
                 <li>
                   <div className="subtotal">
+                    {/* display the subtotal */}
                     <p>SUBTOTAL</p>
                     <p>
                       $
