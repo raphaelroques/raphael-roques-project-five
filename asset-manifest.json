@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/raphael-roques-project-five/static/css/main.58d5c76d.chunk.css",
-    "main.js": "/raphael-roques-project-five/static/js/main.d68415b1.chunk.js",
-    "main.js.map": "/raphael-roques-project-five/static/js/main.d68415b1.chunk.js.map",
+    "main.js": "/raphael-roques-project-five/static/js/main.7cd767d8.chunk.js",
+    "main.js.map": "/raphael-roques-project-five/static/js/main.7cd767d8.chunk.js.map",
     "runtime-main.js": "/raphael-roques-project-five/static/js/runtime-main.635b13dd.js",
     "runtime-main.js.map": "/raphael-roques-project-five/static/js/runtime-main.635b13dd.js.map",
     "static/js/2.970d4668.chunk.js": "/raphael-roques-project-five/static/js/2.970d4668.chunk.js",
     "static/js/2.970d4668.chunk.js.map": "/raphael-roques-project-five/static/js/2.970d4668.chunk.js.map",
     "index.html": "/raphael-roques-project-five/index.html",
-    "precache-manifest.b1f211a1820fbd0901bebffc60ab588b.js": "/raphael-roques-project-five/precache-manifest.b1f211a1820fbd0901bebffc60ab588b.js",
+    "precache-manifest.d220f015c33a3ae48ddf6ed2f3f5941b.js": "/raphael-roques-project-five/precache-manifest.d220f015c33a3ae48ddf6ed2f3f5941b.js",
     "service-worker.js": "/raphael-roques-project-five/service-worker.js",
     "static/css/main.58d5c76d.chunk.css.map": "/raphael-roques-project-five/static/css/main.58d5c76d.chunk.css.map",
     "static/js/2.970d4668.chunk.js.LICENSE.txt": "/raphael-roques-project-five/static/js/2.970d4668.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.635b13dd.js",
     "static/js/2.970d4668.chunk.js",
     "static/css/main.58d5c76d.chunk.css",
-    "static/js/main.d68415b1.chunk.js"
+    "static/js/main.7cd767d8.chunk.js"
   ]
 }
