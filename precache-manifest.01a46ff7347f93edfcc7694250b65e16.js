@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e1a33484a74ebaa17b3ed75affe3b54",
+    "revision": "7f05a9888f914b9922baf43320e98e00",
     "url": "/raphael-roques-project-five/index.html"
   },
   {
-    "revision": "c9e25667c5f883567fb9",
-    "url": "/raphael-roques-project-five/static/css/main.ee90ab6a.chunk.css"
+    "revision": "2270c4b97c03eb20ac02",
+    "url": "/raphael-roques-project-five/static/css/main.08a54c8a.chunk.css"
   },
   {
     "revision": "0aab31bc475240160a11",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/raphael-roques-project-five/static/js/2.970d4668.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c9e25667c5f883567fb9",
+    "revision": "2270c4b97c03eb20ac02",
     "url": "/raphael-roques-project-five/static/js/main.3d0c596a.chunk.js"
   },
   {

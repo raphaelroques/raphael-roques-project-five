@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/raphael-roques-project-five/precache-manifest.c5c27c1ffd3149b65164ff2c53650ac2.js"
+  "/raphael-roques-project-five/precache-manifest.01a46ff7347f93edfcc7694250b65e16.js"
 );
 
 self.addEventListener('message', (event) => {
