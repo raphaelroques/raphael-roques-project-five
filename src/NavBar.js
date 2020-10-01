@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import itemsPricesList from "./itemsPricesList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
@@ -25,7 +24,7 @@ class NavBar extends Component {
             <a href="#contact">CONTACT</a>
           </li>
           <li className="nav-cart">
-            {/* MY CART */}
+            <span class="sr-only">my cart</span>
             <FontAwesomeIcon
               icon={faShoppingCart}
               size="2x"

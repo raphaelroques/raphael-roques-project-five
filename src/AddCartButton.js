@@ -7,6 +7,7 @@ class AddCartButton extends Component {
       count: 20,
     };
   }
+  // create a function that will manage the availability of each element added to the cart
   handleClick = () => {
     this.setState({
       count: this.state.count - 1,

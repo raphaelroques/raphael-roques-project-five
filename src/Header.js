@@ -3,9 +3,11 @@ import SocialFollow from "./SocialFollow";
 import NavBar from "./NavBar.js";
 import logo from "./logo.png";
 
+// Header function component
 const Header = (props) => {
   return (
     <header>
+      {/* import NavBar component */}
       <NavBar
         cart={props.cart}
         removeItem={props.removeItem}
@@ -19,6 +21,7 @@ const Header = (props) => {
           </h1>
         </div>
       </div>
+      {/* import SocialFollow component */}
       <SocialFollow />
     </header>
   );

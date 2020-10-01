@@ -1,6 +1,7 @@
 import React from "react";
 import SocialFollow from "./SocialFollow";
 
+// footer function component
 const Footer = () => {
   return (
     <footer>
@@ -12,7 +13,6 @@ const Footer = () => {
           </a>
         </p>
       </div>
-
       <SocialFollow />
     </footer>
   );
