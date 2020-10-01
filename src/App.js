@@ -11,8 +11,10 @@ class App extends Component {
       userIsLoggedIn: false,
       cart: [],
       countCartItems: 0,
+      available: 20,
     };
   }
+
   handleClick = () => {
     this.setState({
       userIsLoggedIn: !this.state.userIsLoggedIn,
@@ -29,6 +31,7 @@ class App extends Component {
     this.setState({
       cart: oldCart,
       countCartItems: itemsCount,
+      available: this.state.available + 1,
     });
   };
 
@@ -36,18 +39,16 @@ class App extends Component {
     const newItem = { ...addToCartItem };
     const newCart = [...this.state.cart];
     const itemsCount = this.state.countCartItems + 1;
-    // console.log("addtocartitem", addToCartItem);
     newItem.key = Math.random() * 1000;
-
     newCart.push(newItem);
     this.setState({
       cart: newCart,
       countCartItems: itemsCount,
+      available: this.state.available - 1,
     });
   };
 
   render() {
-    console.log(this.state.countCartItems);
     return (
       <div className="App">
         <Header

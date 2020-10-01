@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import itemsPricesList from "./itemsPricesList";
+// import itemsPricesList from "./itemsPricesList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,7 +8,6 @@ class NavBar extends Component {
     super();
     this.state = {
       clicked: 0,
-      prices: itemsPricesList.results,
     };
   }
 
@@ -35,7 +34,7 @@ class NavBar extends Component {
             <p className="cart-items-counter">{this.props.countCartItems}</p>
             {this.state.clicked % 2 ? (
               <ul className="display-cart">
-                {this.props.cart.map((item, index) => {
+                {this.props.cart.map((item) => {
                   return (
                     <li key={item.key} className="cart-item-container">
                       <img src={item.urls.regular} alt="" />
@@ -50,14 +49,25 @@ class NavBar extends Component {
                           REMOVE ITEM
                         </button>
                       </div>
-                      <p>{itemsPricesList[index].price}</p>
+                      <p>${item.price}</p>
                     </li>
                   );
                 })}
-                {/* <li>TOTAL</li>
+                <li>
+                  <div className="subtotal">
+                    <p>SUBTOTAL</p>
+                    <p>
+                      $
+                      {this.props.cart
+                        .reduce((sum, item) => (sum += item.price * 1), 0)
+                        .toFixed(2)}
+                    </p>
+                  </div>
+                </li>
+
                 <li>
                   <button>proceed to checkout</button>
-                </li> */}
+                </li>
               </ul>
             ) : null}
           </li>

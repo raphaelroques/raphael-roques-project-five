@@ -5,13 +5,11 @@ class AddCartButton extends Component {
     super();
     this.state = {
       count: 20,
-      myCart: [],
     };
   }
   handleClick = () => {
     this.setState({
       count: this.state.count - 1,
-      myCart: this.state.myCart,
     });
     this.props.addToCart();
   };
